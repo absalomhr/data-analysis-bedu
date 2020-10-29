@@ -12,5 +12,5 @@
 ### Consulta 4: ¿Qué puestos incluyen la palabra Designer?
 ![imagen](imagenes/Consulta4.PNG)
 
-### Consulta 4: ¿Qué puestos incluyen la palabra Developer?
+### Consulta 5: ¿Qué puestos incluyen la palabra Developer?
 ![imagen](imagenes/Consulta5.PNG)
