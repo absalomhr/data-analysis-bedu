@@ -16,3 +16,5 @@ SELECT * FROM puesto;
 SELECT MAX(id_puesto) AS 'Id máximo' FROM puesto;
 # El id máximo en 1000, entonces se necesitan ids 956-1000:
 SELECT SUM(salario) AS 'Suma 5 últimos salarios' FROM puesto WHERE id_puesto >= 996;
+# Version en una sola linea, sin necesidad de saber el indice máximo
+SELECT SUM(salario) FROM puesto WHERE id_puesto > (SELECT MAX(id_puesto) - 5 FROM puesto);
