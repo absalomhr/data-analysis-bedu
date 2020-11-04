@@ -57,13 +57,16 @@ SELECT * FROM employees;
 SELECT lastName AS 'Apellido', firstName AS 'Nombre' FROM employees JOIN offices ON employees.officeCode = offices.officeCode WHERE offices.country = 'USA';
 
 # Obten el número de cliente, número de cheque y cantidad del cliente que ha realizado el pago más alto.
-show tables;
-desc customers;
+SELECT customerNumber AS 'Número de cliente', checkNumber AS 'Número de cheque', amount AS 'Cantidad' FROM payments WHERE amount = (SELECT MAX(amount) FROM payments);
 
 # Obten el número de cliente, número de cheque y cantidad de aquellos clientes cuyo pago es más alto que el promedio.
+SELECT customerNumber AS 'Número de cliente', checkNumber AS 'Número de cheque', amount AS 'Cantidad' FROM payments WHERE amount > (SELECT AVG(amount) FROM payments);
 
 # Obten el nombre de aquellos clientes que no han hecho ninguna orden.
+SELECT customerName AS 'Nombre de cliente sin orden' FROM customers WHERE customerNumber NOT IN (SELECT customerNumber from orders);
 
 # Obten el máximo, mínimo y promedio del número de productos en las órdenes de venta.
+SELECT MAX(t1.c) AS Máximo, MIN(t1.c) AS Mínimo, AVG(t1.c) AS promedio FROM (SELECT SUM(quantityOrdered) AS c FROM orderdetails GROUP BY orderNumber) AS t1;
 
 # Dentro de la tabla orders, obten el número de órdenes que hay por cada estado.
+SELECT status AS Estado, COUNT(*) AS 'Número de ordenes' FROM orders GROUP BY status;
