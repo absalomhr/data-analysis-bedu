@@ -6,11 +6,14 @@
 
 # Resultados de consultas
 
-### Fecha, nombre y texto de cada comentario.
+### ¿Qué comentarios ha hecho Greg Powell?
 ![imagen](imagenes/consulta1.PNG)
 
-### Título, elenco y año de cada película.
+### ¿Qué comentarios han hecho Greg Powell o Mercedes Tyler?
 ![imagen](imagenes/consulta2.PNG)
 
-### Nombre y contraseña de cada usuario.
+### ¿Cuál es el máximo número de comentarios en una película?
 ![imagen](imagenes/consulta3.PNG)
+
+### ¿Cuál es título de las cinco películas más comentadas?
+![imagen](imagenes/consulta4.PNG)
