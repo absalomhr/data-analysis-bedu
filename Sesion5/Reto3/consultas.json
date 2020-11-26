@@ -1,0 +1,3 @@
+[{$match: {
+   amenities: {$in: ["Wifi", "Ethernet", "Internet"]}
+}}, {$count: 'Casas con internet'}]
